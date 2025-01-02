@@ -1,0 +1,29 @@
+{% extends 'fotter.html' %} {% block content %}
+
+
+    
+    <!-- Welcome Section -->
+    <div class="text-center my-12">
+        <h1 class="text-6xl font-extrabold mb-6 text-teal-200 animate-bounce">AI-Solutions Blogs</h1>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="bg-black relative h-[650px] w-full">
+    
+        <!-- Video Background -->
+        {% load static %}
+        <video class="absolute inset-0 w-full h-[650px] object-cover" autoplay loop muted>
+            <source src="{% static 'video/4K 100 Royalty-Free Stock Footage  Technology HUD Element Intro Background  No Copyright Video - NoCopyrightFootages (1080p, h264, youtube).mp4' %}" type="video/mp4">
+        </video>
+        <!-- Overlay Content -->
+        <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black opacity-75"></div>
+        <div class="relative flex flex-col items-center justify-center  h-[500px] text-center">
+            <h2 class="text-5xl text-lime-400 font-bold mb-6 animate-pulse">The Future of AI</h2>
+            <p class="text-xl text-lime-400 animate-fadeIn"><strong>Explore the endless possibilities AI offers in reshaping industries and daily lives.</strong></p>
+            <a href="gallary"><button class="mt-6 bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-full shadow-lg hover:scale-110 transition-all duration-300">
+                View More
+            </button></a>
+        </div>
+    </section>
+             
+{% endblock %}

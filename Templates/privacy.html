@@ -1,0 +1,65 @@
+{% extends 'fotter.html' %} {% block content %}
+
+<section class="bg-black text-white py-16 px-6 lg:px-20 relative overflow-hidden">
+    <!-- Background Decorations -->
+    <div class="absolute top-0 left-0 bg-blue-600 w-96 h-96 rounded-full opacity-30 blur-2xl"></div>
+    <div class="absolute bottom-0 right-0 bg-purple-600 w-72 h-72 rounded-full opacity-30 blur-2xl"></div>
+    <div class="absolute -top-10 right-20 bg-cyan-500 w-48 h-48 rounded-full opacity-50 blur-lg"></div>
+
+    <div class="container mx-auto relative z-10">
+        <!-- Title -->
+        <h2 class="text-5xl lg:text-6xl font-extrabold text-center mb-12 font-[Poppins] animate-pulse">
+            Privacy Policy
+        </h2>
+
+        <!-- Policy Sections -->
+        <div class="space-y-12">
+            <!-- Section 1 -->
+            <div class="bg-gray-800 p-8 rounded-xl shadow-xl transform transition duration-300 hover:scale-105 hover:shadow-2xl">
+                <h3 class="text-3xl font-semibold mb-4">Introduction</h3>
+                <p class="text-gray-300 text-lg ml-6">At AI-Solution, we are committed to protecting your privacy. This Privacy 
+                    Policy explains how we collect, use, and safeguard your personal information when you interact with our website. 
+                    By using our website, you consent to the practices described below.</p>
+            </div>
+            <!-- Section 2 -->
+            <div class="bg-gray-800 p-8 rounded-xl shadow-xl transform transition duration-300 hover:scale-105 hover:shadow-2xl">
+                <h3 class="text-3xl font-semibold mb-4">1. What Information We Collect</h3>
+                <p class="text-gray-300 text-lg ml-6">When you fill out our Contact Us form, we ask for your:</p>
+                <ul class="list-disc list-inside ml-6 mt-2 text-gray-300 text-lg space-y-1">
+                    <li>Name</li>
+                    <li>Email Address</li>
+                    <li>Phone Number</li>
+                    <li>Company Name</li>
+                    <li>Country</li>
+                    <li>Job Title</li>
+                    <li>Job Description</li>
+                </ul>
+            </div>
+
+            <!-- Section 3 -->
+            <div class="bg-gray-800 p-8 rounded-xl shadow-xl transform transition duration-300 hover:scale-105 hover:shadow-2xl">
+                <h3 class="text-3xl font-semibold mb-4">2. Why We Need Your Information</h3>
+                <p class="text-gray-300 text-lg ml-6">We only use your details to:</p>
+                <ul class="list-disc list-inside ml-6 mt-2 text-gray-300 text-lg space-y-1">
+                    <li>Answer your questions and understand your needs.</li>
+                    <li>Provide you with the right AI-based solutions.</li>
+                    <li>Improve our services and website.</li>
+                </ul>
+            </div>
+
+            <!-- Section 4-->
+            <div class="bg-gray-800 p-8 rounded-xl shadow-xl transform transition duration-300 hover:scale-105 hover:shadow-2xl">
+                <h3 class="text-3xl font-semibold mb-4">3. Sharing Information</h3>
+                <p class="text-gray-300 text-lg ml-6">We don’t sell or share your information with anyone unless:</p>
+                <ul class="list-disc list-inside ml-6 mt-2 text-gray-300 text-lg space-y-1">
+                    <li>The law says we must.</li>
+                    <li>It’s to protect you or us legally.</li>
+                </ul>
+            </div>
+
+            <!-- Add other sections here with the same structure -->
+        </div>
+    </div>
+</section>
+
+{% endblock %}

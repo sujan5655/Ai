@@ -1,0 +1,184 @@
+{% extends 'fotter.html' %} {% block content %}
+
+<section class="bg-black relative">
+  <!-- Video Background -->
+  {% load static %}
+  <video
+    class="absolute inset-0 w-full h-[500px] object-cover"
+    autoplay
+    loop
+    muted
+  >
+    <source src="{% static 'video/green.mp4' %}" type="video/mp4" />
+  </video>
+
+  <!-- Overlay -->
+  <div
+    class="absolute inset-0 bg-gradient-to-b from-black via-transparent to-black opacity-75"
+  ></div>
+
+  <!-- Content -->
+  <div
+    class="relative flex flex-col items-center justify-center h-[500px] text-center"
+  >
+    <!-- Title -->
+    <h2
+      class="text-6xl text-blue-400 font-extrabold mb-6 animate-pulse hover:animate-bounce"
+    >
+      Innovative AI Projects
+    </h2>
+
+    <!-- Subtitle -->
+    <p
+      class="text-2xl text-gray-200 mb-4 transition-all hover:text-cyan-300 animate__animated animate__fadeInUp"
+    >
+      Discover how AI transforms industries with our cutting-edge solutions.
+    </p>
+
+    <!-- Button -->
+    <a href="project">
+      <button
+        class="mt-6 bg-cyan-600 text-white px-8 py-4 rounded-full shadow-lg transition-transform duration-300 hover:bg-cyan-700 hover:scale-110 hover:rotate-2"
+      >
+        Explore Projects
+      </button>
+    </a>
+  </div>
+</section>
+
+<!-- break -->
+
+<div class="w-full h-[1px] mx-auto bg-white p-0"></div>
+
+<!---------------------------------------------- Projects Section --------------------------------------------------------------------------------------->
+<section class="p-8 bg-black rounded-[15px]">
+  <h3
+    class="text-5xl lg:text-7xl font-semibold mb-6 text-center text-cyan-400"
+    style="font-family: 'Lemon', cursive"
+  >
+    Our Projects
+  </h3>
+
+  <!-- Project Images Grid -->
+  <div class="grid grid-cols-1 mb-10 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+    <!-- Image 1 -->
+    <div
+      class="relative group shadow-lg rounded-lg hover:scale-105 transition-transform duration-300 overflow-hidden"
+    >
+      {% load static %}
+      <img
+        class="h-[300px] sm:h-[400px] w-full object-cover rounded-lg"
+        src="{% static '/images/robo.avif' %}"
+        alt="Robot Model"
+      />
+      <div
+        class="absolute inset-0 bg-cyan-800 bg-opacity-40 opacity-0 group-hover:opacity-100 flex items-center justify-center transition duration-300"
+      >
+        <p class="text-white text-lg font-bold">Robot Model</p>
+      </div>
+    </div>
+
+    <!-- Image 2 -->
+    <div
+      class="relative group shadow-lg rounded-lg hover:scale-105 transition-transform duration-300 overflow-hidden"
+    >
+      {% load static %}
+      <img
+        class="h-[300px] sm:h-[400px] w-full object-cover rounded-lg"
+        src="{% static '/images/AI_CHATBOT2.png' %}"
+        alt="AI Chatbot"
+      />
+      <div
+        class="absolute inset-0 bg-purple-800 bg-opacity-40 opacity-0 group-hover:opacity-100 flex items-center justify-center transition duration-300"
+      >
+        <p class="text-white text-lg font-bold">AI Chatbot</p>
+      </div>
+    </div>
+
+    <!-- Image 3 -->
+    <div
+      class="relative group shadow-lg rounded-lg hover:scale-105 transition-transform duration-300 overflow-hidden"
+    >
+      {% load static %}
+      <img
+        class="h-[300px] sm:h-[400px] w-full object-cover rounded-lg"
+        src="{% static '/images/Ai_ecommerce.jpg' %}"
+        alt="E-Commerce Platform"
+      />
+      <div
+        class="absolute inset-0 bg-pink-800 bg-opacity-40 opacity-0 group-hover:opacity-100 flex items-center justify-center transition duration-300"
+      >
+        <p class="text-white text-lg font-bold">E-Commerce Platform</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Project Details Grid -->
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+    <!-- Card 1 -->
+    <div
+      class="bg-gradient-to-r from-cyan-600 to-cyan-400 p-6 rounded-lg shadow-lg hover:shadow-2xl hover:scale-105 transition duration-300"
+    >
+      <h4 class="text-2xl text-white font-semibold mb-2">
+        Smart City Traffic Monitoring
+      </h4>
+      <p class="mb-4 text-gray-100 text-lg" style="font-family: 'Aleo', serif">
+        Implemented a traffic management system using IoT and predictive
+        analytics to reduce congestion by 25%.
+      </p>
+      <button
+        class="bg-gray-900 text-cyan-300 px-4 py-2 font-bold rounded-lg hover:bg-cyan-700 hover:text-white"
+      >
+        Learn More
+      </button>
+    </div>
+
+    <!-- Card 2 -->
+    <div
+      class="bg-gradient-to-r from-purple-600 to-purple-400 p-6 rounded-lg shadow-lg hover:shadow-2xl hover:scale-105 transition duration-300"
+    >
+      <h4 class="text-2xl text-white font-semibold mb-2">
+        Healthcare Analytics Dashboard
+      </h4>
+      <p class="mb-4 text-gray-100 text-lg" style="font-family: 'Aleo', serif">
+        Built a real-time dashboard for hospitals to monitor patient data and
+        predict readmission.
+      </p>
+      <button
+        class="bg-gray-900 text-purple-300 px-4 py-2 font-bold rounded-lg hover:bg-purple-700 hover:text-white"
+      >
+        Learn More
+      </button>
+    </div>
+
+    <!-- Card 3 -->
+    <div
+      class="bg-gradient-to-r from-pink-600 to-pink-400 p-6 rounded-lg shadow-lg hover:shadow-2xl hover:scale-105 transition duration-300"
+    >
+      <h4 class="text-2xl text-white font-semibold mb-2">
+        E-Commerce Personalization Platform
+      </h4>
+      <p class="mb-4 text-gray-100 text-lg" style="font-family: 'Aleo', serif">
+        Developed a platform to personalize shopping experiences, increasing
+        user engagement by 50%.
+      </p>
+      <button
+        class="bg-gray-900 text-pink-300 px-4 py-2 font-bold rounded-lg hover:bg-pink-700 hover:text-white"
+      >
+        Learn More
+      </button>
+    </div>
+  </div>
+
+  <div class="text-center mt-12">
+    <a href="detailproject"
+      ><button
+        class="bg-cyan-400 text-black px-8 py-3 font-bold rounded-[25px] hover:bg-cyan-600 hover:text-white transition duration-300"
+      >
+        See Details
+      </button></a
+    >
+  </div>
+</section>
+
+{% endblock %}

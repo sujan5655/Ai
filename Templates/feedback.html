@@ -1,0 +1,48 @@
+<!-- feedback.html -->
+{% extends 'fotter.html' %} 
+{% block content %}
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.1.2/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-blue-50"> -->
+    <div class="container mx-auto py-8">
+        <div class="bg-white shadow-md rounded-lg p-8 max-w-lg mx-auto">
+            <h2 class="text-2xl font-bold mb-6">Submit Your Feedback</h2>
+            <form method="post">
+                {% csrf_token %}
+                <div class="mb-4">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="name">Name</label>
+                    {{ form.name }}
+                </div>
+                <div class="mb-4">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="comments">Comments</label>
+                    {{ form.comments }}
+                </div>
+                <div class="mb-4">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="rating">Rating</label>
+                    {{ form.rating }}
+                </div>
+                <button type="submit" class="bg-blue-500 text-white font-bold py-2 px-4 rounded hover:bg-blue-700">Submit</button>
+            </form>
+        </div>
+        <div class="mt-12">
+            <h2 class="text-2xl font-bold mb-4">Recent Feedback</h2>
+            {% for feedback in recent_feedbacks %}
+                <div class="bg-white shadow-md rounded-lg p-4 mb-4">
+                    <p class="font-bold text-yellow-500">{{ feedback.name }}</p>
+                    <p class="text-yellow-500">{{ feedback.comments }}</p>
+                    <p class="text-yellow-500">Rating: {{ feedback.rating }} / 5</p>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+<!-- </body>
+</html> -->
+
+{% endblock %}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Messages</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gray-100">
+    <div class="container mx-auto mt-8">
+      <h1 class="text-3xl font-bold text-center mb-8">Contact Messages</h1>
+      <a href="{% url 'manageproject' %}" class="text-3xl font-bold text-center mb-8 text-blue-600"
+        >Back to admin panel</a
+      >
+
+      <div class="overflow-x-auto relative shadow-md sm:rounded-lg">
+        <table class="w-full text-sm text-left text-gray-500">
+          <thead class="text-xs text-gray-700 uppercase bg-gray-200">
+            <tr>
+              <th scope="col" class="px-6 py-3">Name</th>
+              <th scope="col" class="px-6 py-3">Email</th>
+              <th scope="col" class="px-6 py-3">Phone</th>
+              <th scope="col" class="px-6 py-3">Company</th>
+              <th scope="col" class="px-6 py-3">Country</th>
+              <th scope="col" class="px-6 py-3">Job Title</th>
+              <th scope="col" class="px-6 py-3">Job Details</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% if messages %} {% for message in messages %}
+            <tr class="bg-white border-b hover:bg-gray-50">
+              <td class="px-6 py-4">{{ message.name }}</td>
+              <td class="px-6 py-4">{{ message.email }}</td>
+              <td class="px-6 py-4">{{ message.phone }}</td>
+              <td class="px-6 py-4">{{ message.company }}</td>
+              <td class="px-6 py-4">{{ message.country }}</td>
+              <td class="px-6 py-4">{{ message.job_title }}</td>
+              <td class="px-6 py-4">{{ message.job_details }}</td>
+            </tr>
+            {% endfor %} {% else %}
+            <tr>
+              <td colspan="7" class="text-center text-gray-500 py-4">
+                No messages found.
+              </td>
+            </tr>
+            {% endif %}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>

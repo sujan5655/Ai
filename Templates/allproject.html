@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>All Projects</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-blue-400">
+    <div class="container mx-auto mt-8">
+      <h1 class="text-3xl font-bold text-center mb-8">All Projects</h1>
+      <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        {% if project %} {% for proj in project %}
+        <div
+          class="bg-white shadow-md rounded-lg overflow-hidden transform hover:scale-105 transition duration-300 w-[600px] h-[400px]"
+        >
+          <div class="flex items-center">
+            {% if proj.image %}
+            <img
+              src="{{ proj.image.url }}"
+              alt="{{ proj.title }}"
+              class="w-1.5/3 h-[400px] object-cover rounded-l-lg"
+            />
+            {% endif %}
+            <div class="p-4 w-1.5/3">
+              <h2 class="text-lg font-semibold text-gray-800">
+                {{ proj.title }}
+              </h2>
+              <p class="text-4xl text-gray-600 mt-2">
+                {{ proj.description|truncatewords:30 }}
+              </p>
+            </div>
+          </div>
+        </div>
+        {% endfor %} {% else %}
+        <p class="text-center text-gray-500 col-span-full">
+          No projects available at the moment.
+        </p>
+        {% endif %}
+      </div>
+    </div>
+  </body>
+</html>

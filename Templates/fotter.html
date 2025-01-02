@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Solution</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Goldman:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Aleo:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@400;700&family=Inknut+Antiqua:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Squada+One&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lemon&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Aldrich&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style type="text/tailwindcss">
+      @layer utilities {
+        .content-auto {
+          content-visibility: auto;
+        }
+      }
+      @keyframes slideIn {
+        0% {
+          transform: translateX(-100%);
+          opacity: 0;
+        }
+        100% {
+          transform: translateX(0);
+          opacity: 1;
+        }
+      }
+
+      .slide-in {
+        animation: slideIn 0.5s ease-in-out;
+      }
+    </style>
+    <style>
+      body {
+        font-family: "Source Serif Pro", serif;
+      }
+      .heading {
+        font-family: "Inknut Antiqua", serif;
+      }
+    </style>
+    <style>
+      @keyframes typing {
+        0% {
+          width: 0;
+        }
+        100% {
+          width: 100%;
+        }
+      }
+      @keyframes fadeIn {
+        0% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+
+      .typewriter {
+        display: inline-block;
+        overflow: hidden;
+        white-space: nowrap;
+        border-right: 4px solid #fff;
+        width: 0;
+        animation: typing 5s steps(60) 1s forwards;
+      }
+      .fade-text {
+        animation: fadeIn 3s ease-in-out 6s forwards;
+      }
+
+      @keyframes slideInFromLeft {
+        0% {
+          transform: translateX(-100%);
+          opacity: 0;
+        }
+        100% {
+          transform: translateX(0);
+          opacity: 1;
+        }
+      }
+
+      .slide-text {
+        animation: slideInFromLeft 2s ease-out 1s forwards;
+      }
+    </style>
+  </head>
+  <body class="text-white" style="background-color: #000000">
+    <!-- Header Section -->
+    <header
+      style="background: linear-gradient(180deg, #fd7aff, #b26ddd)"
+      class="text-white p-4 shadow-md fixed top-0 left-0 w-full z-50"
+    >
+      <div class="container mx-auto flex items-center justify-between">
+        <div class="flex items-center space-x-4">
+          <div class="rounded-full h-16 w-16">
+            {% load static %}
+            <a href="{%url 'home'%}">
+              <img
+                src="{% static '/images/LOGO.png' %}"
+                alt="Logo"
+                class="h-full w-full object-cover"
+              />
+            </a>
+          </div>
+          <h1
+            class="text-3xl font-extrabold px-2 py-1 rounded"
+            style="font-family: 'Goldman', sans-serif"
+          >
+            AI-Solution
+          </h1>
+        </div>
+        <nav>
+          <ul class="flex font-bold space-x-4">
+            <li>
+              <a href="{%url 'home'%}" class="hover:text-gray-200">Home</a>
+            </li>
+            <!-- <li><a href="blog" class="hover:text-gray-200">Blog</a></li> -->
+            <li><a href="project" class="hover:text-gray-200">Projects</a></li>
+            <li><a href="gallary" class="hover:text-gray-200">Gallary</a></li>
+            <li><a href="contact" class="hover:text-gray-200">Contact</a></li>
+            <!-- {%if request.user.is_superuser%}
+            
+            <a href="manageproject" class="text-white hover:text-gray-300"
+            >Admin Dashboard</a>
+            {%else%}
+            <a href="" class="text-white hover:text-gray-300 "
+            >Seller Dashboard</a>
+          {%endif%} -->
+          
+            
+        </li>
+            <!-- {% if user.is.not_authenticated %}
+            <li>
+              <a href="/login/" class="text-white hover:text-gray-300">Login</a>
+            </li>
+            {% else %}
+            <li>
+              <a href="{% url 'logout' %}" class="text-white hover:text-gray-300"
+                >Logout</a>
+            </li>
+            {% endif %} -->
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="pt-20">
+      <!-- Padding offset for fixed header -->
+      {% block content %} {% endblock %}
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="bg-gray-700 text-white py-6 h-[150px]">
+      <div class="container mx-auto flex flex-col md:flex-row justify-between items-center h-full">
+        <div class="text-center md:text-left mb-4 md:mb-0">
+          <a href="#" class="text-lg font-bold hover:underline">
+            &copy; 2024 AI-Solution. All Rights Reserved.
+          </a>
+        </div>
+        <div class="flex flex-wrap justify-center md:justify-end space-x-6">
+          <a href="/privacy" class="text-base hover:underline">
+            Privacy Policy
+          </a>
+          <a href="/termscondition" class="text-base hover:underline">
+            Terms & Conditions
+          </a>
+          <a href="/contact" class="text-base hover:underline">
+            Contact Us
+          </a>
+          <a href="/feedback/" class="text-base hover:underline">
+            Feedback
+          </a>
+        </div>
+      </div>
+    </footer>
+    
+    
+  </body>
+</html>
