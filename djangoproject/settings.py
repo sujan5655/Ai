@@ -79,6 +79,18 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+import os
+
+# Static files (CSS, JavaScript, Images)
+STATIC_URL = '/static/'
+
+# Directory for additional static files (during development)
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static'),
+]
+
+# Directory where `collectstatic` will place static files (for production)
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 
 # Password validation

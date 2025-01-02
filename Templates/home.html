@@ -46,9 +46,11 @@
     <!-- Right-side video section -->
     <div class="w-full lg:w-1/2">
       {% load static %}
-      <!-- <video class="rounded-[30px] w-full h-auto shadow-4xl" autoplay loop muted>
-                <source src="{% static 'video/4K 100 Royalty-Free Stock Footage  Technology HUD Element Intro Background  No Copyright Video - NoCopyrightFootages (1080p, h264, youtube).mp4' %}" type="video/mp4">
-            </video> -->
+      <img
+        src="{% static 'images/image.png' %}"
+        alt="Image Description"
+        class="rounded-[30px] w-full h-auto shadow-4xl"
+      />
     </div>
   </div>
 </section>
@@ -250,10 +252,11 @@
       class="relative group h-[400px] w-[800px] rounded-md shadow-lg overflow-hidden transform transition duration-300 hover:scale-105"
     >
       {% load static %}
-      <!-- <video class="w-full h-full object-cover" autoplay loop muted>
-        <source src="{% static 'video/AICHATBOT(5).mp4' %}" type="video/mp4" />
-      </video> -->
-      <!-- Video Overlay -->
+      <img
+        src="{% static 'images/about.jpg' %}"
+        alt="Image Description"
+        class="rounded-[30px] w-full h-[600px] shadow-4xl"
+      />
       <div
         class="absolute inset-0 bg-black bg-opacity-40 group-hover:bg-opacity-60 transition duration-300 flex items-center justify-center"
       >
@@ -334,267 +337,270 @@
 <section class="bg-black relative h-[620px] w-full">
   <!-- Video Background -->
   {% load static %}
-  <video
-    class="absolute inset-0 w-full h-[620px] mb-3 object-cover"
-    autoplay
-    loop
-    muted
-  >
-    <source src="{% static 'video/simple.mp4' %}" type="video/mp4" />
-  </video>
-  <!-- Overlay Content -->
-  <div
-    class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black opacity-75"
-  ></div>
-  <div
-    class="relative flex flex-col items-center justify-center h-[500px] text-center"
-  >
-    <h2 class="text-5xl text-[#e879f9] font-bold mb-4 animate-pulse">
-      Explore Events, Memories, and Highlights
-    </h2>
-    <p class="text-xl text-[#e879f9] animate-fadeIn">
-      Dive into our gallery of past and upcoming moments.
-    </p>
-    <a href="gallary"
-      ><button
-        class="mt-6 bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-full shadow-lg hover:scale-110 transition-all duration-300"
-      >
-        View Gallery
-      </button></a
-    >
-  </div>
-</section>
+  <section class="relative">
+    <!-- Background Image -->
+    <img
+      src="{% static 'images/ai.jpg' %}"
+      alt="Image Description"
+      class="rounded-[30px] ml-[400px] w-[800px] h-[500px] shadow-4xl"
+    />
 
-<!------------------------------------------------------------------------------------------------------------------------------------------- -->
-<div class="w-full h-[1px] mx-auto bg-white p-0"></div>
-
-<!-- Customer Reviews -->
-<section
-  class="bg-gradient-to-br from-gray-900 via-black to-gray-800 text-white py-16 px-6 lg:px-20"
->
-  <h3
-    class="text-5xl font-bold text-center mb-12"
-    style="font-family: 'Audiowide', cursive"
-  >
-    Customer Reviews
-  </h3>
-  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-    <!-- Review 1 -->
+    <!-- Overlay Gradient -->
     <div
-      class="bg-gray-800 p-6 rounded-lg shadow-lg hover:scale-105 transition-transform duration-300"
-    >
-      <p class="text-lg italic mb-4">"Great Product! Highly recommended."</p>
-      <div class="flex items-center justify-between">
-        <h4 class="text-xl font-semibold">- Amar Mahashet</h4>
+      class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black opacity-75 rounded-[30px]"
+    ></div>
 
-        <div class="flex">
-          {% load static %}
-          <img
-            class="w-6 h-6"
-            src="{% static 'images/star.png' %}"
-            alt="Star"
-          />
-          <img
-            class="w-6 h-6"
-            src="{% static 'images/star.png' %}"
-            alt="Star"
-          />
-          <img
-            class="w-6 h-6"
-            src="{% static 'images/star.png' %}"
-            alt="Star"
-          />
-          <img
-            class="w-6 h-6"
-            src="{% static 'images/star.png' %}"
-            alt="Star"
-          />
-          <img
-            class="w-6 h-6"
-            src="{% static 'images/star.png' %}"
-            alt="Gray Star"
-          />
-        </div>
-      </div>
-    </div>
-
-    <!-- Review 2 -->
+    <!-- Overlay Content -->
     <div
-      class="bg-gray-800 p-6 rounded-lg shadow-lg hover:scale-105 transition-transform duration-300"
+      class="absolute inset-0 flex flex-col items-center justify-center text-center"
     >
-      <p class="text-lg italic mb-4">
-        "Exceptional service and user-friendly solutions."
+      <h2 class="text-2xl text-[#e879f9] font-bold mb-4 animate-pulse">
+        Explore Events, Memories, and Highlights
+      </h2>
+      <p class="text-xl text-[#e879f9] animate-fadeIn">
+        Dive into our gallery of past and upcoming moments.
       </p>
-      <div class="flex items-center justify-between">
-        <h4 class="text-xl font-semibold">- Kritika Sharma</h4>
-        <div class="flex">
-          {% load static %}
-          <img
-            class="w-6 h-6"
-            src="{% static 'images/star.png' %}"
-            alt="Star"
-          />
-          <img
-            class="w-6 h-6"
-            src="{% static 'images/star.png' %}"
-            alt="Star"
-          />
-          <img
-            class="w-6 h-6"
-            src="{% static 'images/star.png' %}"
-            alt="Star"
-          />
-          <img
-            class="w-6 h-6"
-            src="{% static 'images/star.png' %}"
-            alt="Star"
-          />
-          <img
-            class="w-6 h-6"
-            src="{% static 'images/rating.png' %}"
-            alt="Gray Star"
-          />
-        </div>
-      </div>
+      <a href="/gallary">
+        <button
+          class="mt-6 bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-full shadow-lg hover:scale-110 transition-all duration-300"
+        >
+          View Events
+        </button>
+      </a>
     </div>
-    <div
-      class="bg-gray-800 p-6 rounded-lg shadow-lg hover:scale-105 transition-transform duration-300"
-    >
-      <p class="text-lg italic mb-4">
-        "Outstanding help and easy to use arrangements."
-      </p>
-      <div class="flex items-center justify-between">
-        <h4 class="text-xl font-semibold">- Sujan Chaudhary</h4>
-        <div class="flex">
-          {% load static %}
-          <img
-            class="w-6 h-6"
-            src="{% static 'images/star.png' %}"
-            alt="Star"
-          />
-          <img
-            class="w-6 h-6"
-            src="{% static 'images/star.png' %}"
-            alt="Star"
-          />
-          <img
-            class="w-6 h-6"
-            src="{% static 'images/star.png' %}"
-            alt="Star"
-          />
-          <img
-            class="w-6 h-6"
-            src="{% static 'images/star.png' %}"
-            alt="Star"
-          />
-          <img
-            class="w-6 h-6"
-            src="{% static 'images/star.png' %}"
-            alt="Gray Star"
-          />
-        </div>
-      </div>
-    </div>
-  </div>
-  <!--  -->
+  </section>
 
-  <div class="container mx-auto py-8">
-    <!-- Your existing homepage content here -->
-    <div class="mt-12">
-      <h2 class="text-2xl font-bold mb-4">Recent Feedback</h2>
-      {% for feedback in recent_feedbacks %}
-      <div class="bg-white shadow-md rounded-lg p-4 mb-4">
-        <p class="font-bold">{{ feedback.name }}</p>
-        <p>{{ feedback.comments }}</p>
-        <p class="text-yellow-500">Rating: {{ feedback.rating }} / 5</p>
-      </div>
-      {% endfor %}
-    </div>
-  </div>
-</section>
+  <!------------------------------------------------------------------------------------------------------------------------------------------- -->
+  <div class="w-full h-[1px] mx-auto bg-white p-0"></div>
 
-<!-------------------------------------------------Head Footer---------------------------------------------------------------------->
-<div
-  class="relative h-[800px] bg-gradient-to-r from-blue-900 to-purple-900 flex justify-center items-center overflow-hidden"
->
-  <!-- Inner Box -->
-  <div
-    class="absolute top-1/2 transform -translate-y-1/2 w-[90%] max-w-[1200px] h-[800px] bg-blue-200 rounded-lg shadow-2xl z-10 p-6 flex flex-col items-center justify-between"
+  <!-- Customer Reviews -->
+  <section
+    class="bg-gradient-to-br from-gray-900 via-black to-gray-800 text-white py-16 px-6 lg:px-20"
   >
-    <p class="text-4xl font-bold text-blue-900 mb-4">Find your Destination</p>
-    <p class="text-xl text-gray-700 text-center px-4 mb-6">
-      At AI-Solution, we strive to innovate and deliver state-of-the-art
-      AI-powered solutions that simplify and enhance the digital employee
-      experience. Follow us on social platforms for updates and innovations.
-    </p>
+    <h3
+      class="text-5xl font-bold text-center mb-12"
+      style="font-family: 'Audiowide', cursive"
+    >
+      Customer Reviews
+    </h3>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- Review 1 -->
+      <div
+        class="bg-gray-800 p-6 rounded-lg shadow-lg hover:scale-105 transition-transform duration-300"
+      >
+        <p class="text-lg italic mb-4">"Great Product! Highly recommended."</p>
+        <div class="flex items-center justify-between">
+          <h4 class="text-xl font-semibold">- Amar Mahashet</h4>
 
-    <!-- Google Map Section -->
-    <div class="w-full h-[550px] rounded-lg overflow-hidden shadow-lg">
-      <iframe
-        class="w-full h-full"
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.8354345095873!2d144.9630583153159!3d-37.81362797975192!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xf577e1ba7ed28ba9!2sFederation%20Square!5e0!3m2!1sen!2sau!4v1635671783681!5m2!1sen!2sau"
-        frameborder="0"
-        allowfullscreen=""
-        loading="lazy"
-      ></iframe>
+          <div class="flex">
+            {% load static %}
+            <img
+              class="w-6 h-6"
+              src="{% static 'images/star.png' %}"
+              alt="Star"
+            />
+            <img
+              class="w-6 h-6"
+              src="{% static 'images/star.png' %}"
+              alt="Star"
+            />
+            <img
+              class="w-6 h-6"
+              src="{% static 'images/star.png' %}"
+              alt="Star"
+            />
+            <img
+              class="w-6 h-6"
+              src="{% static 'images/star.png' %}"
+              alt="Star"
+            />
+            <img
+              class="w-6 h-6"
+              src="{% static 'images/star.png' %}"
+              alt="Gray Star"
+            />
+          </div>
+        </div>
+      </div>
+
+      <!-- Review 2 -->
+      <div
+        class="bg-gray-800 p-6 rounded-lg shadow-lg hover:scale-105 transition-transform duration-300"
+      >
+        <p class="text-lg italic mb-4">
+          "Exceptional service and user-friendly solutions."
+        </p>
+        <div class="flex items-center justify-between">
+          <h4 class="text-xl font-semibold">- Kritika Sharma</h4>
+          <div class="flex">
+            {% load static %}
+            <img
+              class="w-6 h-6"
+              src="{% static 'images/star.png' %}"
+              alt="Star"
+            />
+            <img
+              class="w-6 h-6"
+              src="{% static 'images/star.png' %}"
+              alt="Star"
+            />
+            <img
+              class="w-6 h-6"
+              src="{% static 'images/star.png' %}"
+              alt="Star"
+            />
+            <img
+              class="w-6 h-6"
+              src="{% static 'images/star.png' %}"
+              alt="Star"
+            />
+            <img
+              class="w-6 h-6"
+              src="{% static 'images/rating.png' %}"
+              alt="Gray Star"
+            />
+          </div>
+        </div>
+      </div>
+      <div
+        class="bg-gray-800 p-6 rounded-lg shadow-lg hover:scale-105 transition-transform duration-300"
+      >
+        <p class="text-lg italic mb-4">
+          "Outstanding help and easy to use arrangements."
+        </p>
+        <div class="flex items-center justify-between">
+          <h4 class="text-xl font-semibold">- Sujan Chaudhary</h4>
+          <div class="flex">
+            {% load static %}
+            <img
+              class="w-6 h-6"
+              src="{% static 'images/star.png' %}"
+              alt="Star"
+            />
+            <img
+              class="w-6 h-6"
+              src="{% static 'images/star.png' %}"
+              alt="Star"
+            />
+            <img
+              class="w-6 h-6"
+              src="{% static 'images/star.png' %}"
+              alt="Star"
+            />
+            <img
+              class="w-6 h-6"
+              src="{% static 'images/star.png' %}"
+              alt="Star"
+            />
+            <img
+              class="w-6 h-6"
+              src="{% static 'images/star.png' %}"
+              alt="Gray Star"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--  -->
+
+    <div class="container mx-auto py-8">
+      <!-- Your existing homepage content here -->
+      <div class="mt-12">
+        <h2 class="text-2xl font-bold mb-4">Recent Feedback</h2>
+        {% for feedback in recent_feedbacks %}
+        <div class="bg-white shadow-md rounded-lg p-4 mb-4">
+          <p class="font-bold">{{ feedback.name }}</p>
+          <p>{{ feedback.comments }}</p>
+          <p class="text-yellow-500">Rating: {{ feedback.rating }} / 5</p>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+
+  <!-------------------------------------------------Head Footer---------------------------------------------------------------------->
+  <div
+    class="relative h-[800px] bg-gradient-to-r from-blue-900 to-purple-900 flex justify-center items-center overflow-hidden"
+  >
+    <!-- Inner Box -->
+    <div
+      class="absolute top-1/2 transform -translate-y-1/2 w-[90%] max-w-[1200px] h-[800px] bg-blue-200 rounded-lg shadow-2xl z-10 p-6 flex flex-col items-center justify-between"
+    >
+      <p class="text-4xl font-bold text-blue-900 mb-4">Find your Destination</p>
+      <p class="text-xl text-gray-700 text-center px-4 mb-6">
+        At AI-Solution, we strive to innovate and deliver state-of-the-art
+        AI-powered solutions that simplify and enhance the digital employee
+        experience. Follow us on social platforms for updates and innovations.
+      </p>
+
+      <!-- Google Map Section -->
+      <div class="w-full h-[550px] rounded-lg overflow-hidden shadow-lg">
+        <iframe
+          class="w-full h-full"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.8354345095873!2d144.9630583153159!3d-37.81362797975192!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xf577e1ba7ed28ba9!2sFederation%20Square!5e0!3m2!1sen!2sau!4v1635671783681!5m2!1sen!2sau"
+          frameborder="0"
+          allowfullscreen=""
+          loading="lazy"
+        ></iframe>
+      </div>
+    </div>
+
+    <!-- Decorative Elements -->
+    <div
+      class="absolute top-0 left-0 w-40 h-40 bg-purple-500 rounded-full blur-3xl opacity-30 z-0"
+    ></div>
+    <div
+      class="absolute bottom-0 right-0 w-60 h-60 bg-blue-400 rounded-full blur-2xl opacity-40 z-0"
+    ></div>
+    <div
+      class="absolute top-10 right-10 w-20 h-20 bg-yellow-500 rounded-full blur-3xl opacity-20 z-0"
+    ></div>
+  </div>
+
+  <!-- Follow Us Section -->
+  <div class="bg-blue-900 text-white py-6">
+    <div class="container mx-auto text-center">
+      <h3 class="text-2xl font-bold mb-4">Follow Us</h3>
+      <div class="flex justify-center space-x-6">
+        <!-- Facebook Icon -->
+        <a
+          href="https://www.facebook.com"
+          target="_blank"
+          class="hover:scale-110 hover:text-blue-700 transition duration-300"
+        >
+          <img
+            class="w-8 h-8"
+            src="{% static 'images/facebook.svg' %}"
+            alt="Facebook"
+          />
+        </a>
+        <!-- Twitter Icon -->
+        <a
+          href="https://www.twitter.com"
+          target="_blank"
+          class="hover:scale-110 hover:text-blue-500 transition duration-300"
+        >
+          <img
+            class="w-8 h-8"
+            src="{% static 'images/twitterx.svg' %}"
+            alt="Twitter"
+          />
+        </a>
+        <!-- Instagram Icon -->
+        <a
+          href="https://www.instagram.com"
+          target="_blank"
+          class="hover:scale-110 hover:text-pink-600 transition duration-300"
+        >
+          <img
+            class="w-8 h-8"
+            src="{% static 'images/instagram.svg' %}"
+            alt="Instagram"
+          />
+        </a>
+      </div>
     </div>
   </div>
 
-  <!-- Decorative Elements -->
-  <div
-    class="absolute top-0 left-0 w-40 h-40 bg-purple-500 rounded-full blur-3xl opacity-30 z-0"
-  ></div>
-  <div
-    class="absolute bottom-0 right-0 w-60 h-60 bg-blue-400 rounded-full blur-2xl opacity-40 z-0"
-  ></div>
-  <div
-    class="absolute top-10 right-10 w-20 h-20 bg-yellow-500 rounded-full blur-3xl opacity-20 z-0"
-  ></div>
-</div>
-
-<!-- Follow Us Section -->
-<div class="bg-blue-900 text-white py-6">
-  <div class="container mx-auto text-center">
-    <h3 class="text-2xl font-bold mb-4">Follow Us</h3>
-    <div class="flex justify-center space-x-6">
-      <!-- Facebook Icon -->
-      <a
-        href="https://www.facebook.com"
-        target="_blank"
-        class="hover:scale-110 hover:text-blue-700 transition duration-300"
-      >
-        <img
-          class="w-8 h-8"
-          src="{% static 'images/facebook.svg' %}"
-          alt="Facebook"
-        />
-      </a>
-      <!-- Twitter Icon -->
-      <a
-        href="https://www.twitter.com"
-        target="_blank"
-        class="hover:scale-110 hover:text-blue-500 transition duration-300"
-      >
-        <img
-          class="w-8 h-8"
-          src="{% static 'images/twitterx.svg' %}"
-          alt="Twitter"
-        />
-      </a>
-      <!-- Instagram Icon -->
-      <a
-        href="https://www.instagram.com"
-        target="_blank"
-        class="hover:scale-110 hover:text-pink-600 transition duration-300"
-      >
-        <img
-          class="w-8 h-8"
-          src="{% static 'images/instagram.svg' %}"
-          alt="Instagram"
-        />
-      </a>
-    </div>
-  </div>
-</div>
-
-{% endblock %}
+  {% endblock %}
+</section>
