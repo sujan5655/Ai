@@ -1,75 +1,121 @@
 {% extends 'fotter.html' %} {% block content %}
 
-
-
-
 <!-- break -->
 
-<div class="w-full h-[1px] mx-auto bg-white  p-0 "> </div>
-
-
+<div class="w-full h-[1px] mx-auto bg-white p-0"></div>
 
 <!---------------------------------------------- Projects Section --------------------------------------------------------------------------------------->
-<section class="p-8 bg-black rounded-[15px]">
-    <h3 class="text-5xl lg:text-7xl font-semibold mb-6 text-center text-cyan-400" style="font-family: 'Lemon', cursive;">Our Projects</h3>
-    
-    <!-- Project Images Grid -->
-    <div class="grid grid-cols-1 gap-6">
-        <!-- Image 1 -->
-        <div class="relative group shadow-lg rounded-lg hover:scale-105 transition-transform duration-300 overflow-hidden flex flex">
-            {% load static %}
-            <img class="h-[300px] sm:h-[400px] w-[50%] object-cover rounded-lg" src="{% static '/images/robo.avif' %}" alt="Robot Model">
-           
-            <div class="bg-gradient-to-r from-cyan-600 to-cyan-400 p-6 rounded-lg shadow-lg hover:shadow-2xl hover:scale-105 transition duration-300">
-              <h4 class="text-2xl text-white font-semibold mb-2">Smart City Traffic Monitoring</h4>
-              <p class="mb-4 text-gray-100 text-lg" style="font-family: 'Aleo', serif;">Implemented a traffic management system using IoT and predictive analytics to reduce congestion by 25%.</p>
-              
-          </div>
-        </div>
+<section class="p-8 bg-black rounded-[15px] mt-[100px]">
+  <h3
+    class="text-5xl lg:text-7xl font-semibold mb-6 text-center text-cyan-400"
+    style="font-family: 'Lemon', cursive"
+  >
+    Our Projects
+  </h3>
 
-        <!-- Image 2 -->
-        <div class="relative group shadow-lg rounded-lg hover:scale-105 transition-transform duration-300 overflow-hidden flex flex">
-            {% load static %}
-            <img class="h-[300px] sm:h-[400px] w-[50%] object-cover rounded-lg" src="{% static '/images/AI_CHATBOT2.png' %}" alt="AI Chatbot">
-            <div class="bg-gradient-to-r from-purple-600 to-purple-400 p-6 rounded-lg shadow-lg hover:shadow-2xl hover:scale-105 transition duration-300">
-              <h4 class="text-2xl text-white font-semibold mb-2">Healthcare Analytics Dashboard</h4>
-              <p class="mb-4 text-gray-100 text-lg" style="font-family: 'Aleo', serif;">Built a real-time dashboard for hospitals to monitor patient data and predict readmission.</p>
-             
-          </div>
-        </div>
+  <!-- Project Images Grid -->
+  <div class="grid grid-cols-1 gap-6">
+    <!-- Image 1 -->
+    <div
+      class="relative group shadow-lg rounded-lg hover:scale-105 transition-transform duration-300 overflow-hidden flex flex"
+    >
+      {% load static %}
+      <img
+        class="h-[300px] sm:h-[400px] w-[50%] object-cover rounded-lg"
+        src="{% static '/images/robo.avif' %}"
+        alt="Robot Model"
+      />
 
-        <!-- Image 3 -->
-        <div class="relative group shadow-lg rounded-lg hover:scale-105 transition-transform duration-300 overflow-hidden flex flex">
-            {% load static %}
-            <img class="h-[300px] sm:h-[400px] w-[50%] object-cover rounded-lg" src="{% static '/images/Ai_ecommerce.jpg' %}" alt="E-Commerce Platform">
-            <div class="bg-gradient-to-r from-pink-600 to-pink-400 p-6 rounded-lg shadow-lg hover:shadow-2xl hover:scale-105 transition duration-300">
-              <h4 class="text-2xl text-white font-semibold mb-2">E-Commerce Personalization Platform</h4>
-              <p class="mb-4 text-gray-100 text-lg" style="font-family: 'Aleo', serif;">Developed a platform to personalize shopping experiences, increasing user engagement by 50%.</p>
-              
-          </div>
-        </div>
+      <div
+        class="bg-gradient-to-r from-cyan-600 to-cyan-400 p-6 rounded-lg shadow-lg hover:shadow-2xl hover:scale-105 transition duration-300"
+      >
+        <h4 class="text-2xl text-white font-semibold mb-2">
+          Smart City Traffic Monitoring
+        </h4>
+        <p
+          class="mb-4 text-gray-100 text-lg"
+          style="font-family: 'Aleo', serif"
+        >
+          Implemented a traffic management system using IoT and predictive
+          analytics to reduce congestion by 25%.
+        </p>
+      </div>
     </div>
-{%for prop in project%}
-{%if prop%}
 
-   
-   <div class="relative group shadow-lg rounded-lg hover:scale-105 transition-transform duration-300 overflow-hidden flex flex">
-    {% load static %}
-    <img class="h-[300px] sm:h-[400px] w-[50%] object-cover rounded-lg" src="{{prop.image.url }}" alt="{{ prop.title }}">
-    <div class="bg-gradient-to-r from-pink-600 to-pink-400 p-6 rounded-lg shadow-lg hover:shadow-2xl hover:scale-105 transition duration-300">
-      <h4 class="text-2xl text-white font-semibold mb-2">{{prop.title}}</h4>
-      <p class="mb-4 text-gray-100 text-lg" style="font-family: 'Aleo', serif;">{{prop.description}}</p>
-      
+    <!-- Image 2 -->
+    <div
+      class="relative group shadow-lg rounded-lg hover:scale-105 transition-transform duration-300 overflow-hidden flex flex"
+    >
+      {% load static %}
+      <img
+        class="h-[300px] sm:h-[400px] w-[50%] object-cover rounded-lg"
+        src="{% static '/images/AI_CHATBOT2.png' %}"
+        alt="AI Chatbot"
+      />
+      <div
+        class="bg-gradient-to-r from-purple-600 to-purple-400 p-6 rounded-lg shadow-lg hover:shadow-2xl hover:scale-105 transition duration-300"
+      >
+        <h4 class="text-2xl text-white font-semibold mb-2">
+          Healthcare Analytics Dashboard
+        </h4>
+        <p
+          class="mb-4 text-gray-100 text-lg"
+          style="font-family: 'Aleo', serif"
+        >
+          Built a real-time dashboard for hospitals to monitor patient data and
+          predict readmission.
+        </p>
+      </div>
+    </div>
+
+    <!-- Image 3 -->
+    <div
+      class="relative group shadow-lg rounded-lg hover:scale-105 transition-transform duration-300 overflow-hidden flex flex"
+    >
+      {% load static %}
+      <img
+        class="h-[300px] sm:h-[400px] w-[50%] object-cover rounded-lg"
+        src="{% static '/images/Ai_ecommerce.jpg' %}"
+        alt="E-Commerce Platform"
+      />
+      <div
+        class="bg-gradient-to-r from-pink-600 to-pink-400 p-6 rounded-lg shadow-lg hover:shadow-2xl hover:scale-105 transition duration-300"
+      >
+        <h4 class="text-2xl text-white font-semibold mb-2">
+          E-Commerce Personalization Platform
+        </h4>
+        <p
+          class="mb-4 text-gray-100 text-lg"
+          style="font-family: 'Aleo', serif"
+        >
+          Developed a platform to personalize shopping experiences, increasing
+          user engagement by 50%.
+        </p>
+      </div>
+    </div>
   </div>
-</div>
-  
- 
-{%endif%}
-{%endfor%}
-  
-   
+  {%for prop in project%} {%if prop%}
 
-   
+  <div
+    class="relative group shadow-lg rounded-lg hover:scale-105 transition-transform duration-300 overflow-hidden flex flex"
+  >
+    {% load static %}
+    <img
+      class="h-[300px] sm:h-[400px] w-[50%] object-cover rounded-lg"
+      src="{{prop.image.url }}"
+      alt="{{ prop.title }}"
+    />
+    <div
+      class="bg-gradient-to-r from-pink-600 to-pink-400 p-6 rounded-lg shadow-lg hover:shadow-2xl hover:scale-105 transition duration-300"
+    >
+      <h4 class="text-2xl text-white font-semibold mb-2">{{prop.title}}</h4>
+      <p class="mb-4 text-gray-100 text-lg" style="font-family: 'Aleo', serif">
+        {{prop.description}}
+      </p>
+    </div>
+  </div>
+
+  {%endif%} {%endfor%}
 </section>
 
 {% endblock %}
